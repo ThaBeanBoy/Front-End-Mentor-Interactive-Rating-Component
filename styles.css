@@ -9,6 +9,7 @@
   max-width: 410px;
   padding: 34px;
   border-radius: 25px;
+  margin: 16px;
   background: #252d37;
   background: linear-gradient(45deg, #29323d 25%, #3a4c64 100%);
   background: -webkit-linear-gradient(45deg, #29323d 25%, #3a4c64 100%);
@@ -88,6 +89,7 @@
   max-width: 410px;
   padding: 34px;
   border-radius: 25px;
+  margin: 16px;
   background: #252d37;
   background: linear-gradient(45deg, #29323d 25%, #3a4c64 100%);
   background: -webkit-linear-gradient(45deg, #29323d 25%, #3a4c64 100%);
@@ -150,10 +152,6 @@ body {
 }
 
 .attribution {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
   max-width: 410px;
   text-align: center;
   margin-top: 16px;
