@@ -48,6 +48,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  -webkit-tap-highlight-color: transparent;
   cursor: pointer;
   transition: 0.25s;
 }
@@ -151,8 +152,7 @@ body {
 .attribution {
   position: absolute;
   left: 50%;
-  bottom: 20px;
-  transform: translate(-50%, -50%);
+  bottom: 0;
   max-width: 410px;
   text-align: center;
   margin-top: 16px;
