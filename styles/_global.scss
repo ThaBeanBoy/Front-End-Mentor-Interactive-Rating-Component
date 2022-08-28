@@ -1,0 +1,53 @@
+/* Breakpoints */
+$mobile-breakpoint: 375px;
+$desktop-breakpoint: 1440px;
+
+/* Colours */
+$primary-orange: hsl(25, 97%, 53%);
+$white: hsl(0, 0%, 100%);
+$Light-Grey: hsl(217, 12%, 63%);
+$Medium-Grey: hsl(216, 12%, 54%);
+$Dark-Blue: hsl(213, 19%, 18%);
+$Very-Dark-Blue: hsl(216, 12%, 8%);
+
+/* Transition time */
+$transitition-time: 0.25s;
+
+$max-width-of-box: 410px;
+
+@mixin box-widths-and-padding {
+  max-width: $max-width-of-box;
+  padding: 34px;
+  border-radius: 25px;
+
+  background: $Dark-Blue;
+
+  background: linear-gradient(
+    45deg,
+    hsla(213, 20%, 20%, 1) 25%,
+    hsla(215, 26%, 31%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    45deg,
+    hsla(213, 20%, 20%, 1) 25%,
+    hsla(215, 26%, 31%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    45deg,
+    hsla(213, 20%, 20%, 1) 25%,
+    hsla(215, 26%, 31%, 1) 100%
+  );
+
+  .header-message {
+    margin-bottom: 24px;
+    letter-spacing: 2px;
+  }
+
+  .message {
+    color: $Medium-Grey;
+    line-height: 24px;
+    margin-bottom: 32px;
+  }
+}

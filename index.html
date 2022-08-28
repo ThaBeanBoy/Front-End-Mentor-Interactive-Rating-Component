@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive rating component</title>
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- Rating state start -->
+
+    <div class="rating-box">
+      <div class="top-icon">
+        <img id="rating-box-top-img" src="./images/icon-star.svg" alt="" />
+      </div>
+      <h3 class="header-message">How did we do?</h3>
+      <p class="message">
+        Please let us know how we did with your support request. All feedback is
+        appreciated to help us improve our offering!
+      </p>
+
+      <div class="slideChangers">
+        <span class="slideChanger" data-index-active>1</span>
+        <span class="slideChanger">2</span>
+        <span class="slideChanger">3</span>
+        <span class="slideChanger">4</span>
+        <span class="slideChanger">5</span>
+      </div>
+
+      <div id="submitBtn">Submit</div>
+    </div>
+
+    <!-- Rating state end -->
+
+    <!-- Thank you state start -->
+    <div class="thank-you-box">
+      <img
+        src="./images/illustration-thank-you.svg"
+        alt="Thank You Image"
+        id="cool-pic"
+      />
+      <p class="user-selection">
+        You selected <span id="selected-value">x</span> out of 5
+      </p>
+      <h3 class="header-message">Thank you!</h3>
+      <p class="message">
+        Please let us know how we did with your support request. All feedback is
+        appreciated to help us improve our offering!
+      </p>
+    </div>
+
+    <!-- Add rating here -->
+    <!-- ! We appreciate you taking the time to give a rating. If
+    ! you ever need more support, don’t hesitate to get in touch! -->
+
+    <!-- Thank you state end -->
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.frontendmentor.io/profile/ThaBeanBoy">ThaBeanBoy</a>.
+    </div>
+
+    <script>
+      // # Review Click
+      let int_pickedIndx = 0;
+      const slideChangerBtns = document.querySelectorAll('.slideChanger');
+
+      slideChangerBtns.forEach((element, indx) => {
+        element.addEventListener('click', () => {
+          // Remove the data-index-active attribute from the current indx
+          slideChangerBtns[int_pickedIndx].removeAttribute('data-index-active');
+
+          // Add the data-index-active to the current index
+          slideChangerBtns[indx].setAttribute('data-index-active', '');
+
+          // Save the picked indx
+          int_pickedIndx = indx;
+        });
+      });
+
+      // # Submit review
+      const rateBox = document.querySelector('.rating-box');
+      const thankYouBox = document.querySelector('.thank-you-box');
+
+      const submitBtn = document.querySelector('#submitBtn');
+      submitBtn.addEventListener('click', () => {
+        // Save the review for the "thank you" box
+        document.querySelector('#selected-value').innerHTML =
+          int_pickedIndx + 1;
+
+        // display none the rate box
+        rateBox.style.display = 'none';
+
+        // display the "thank you" box
+        thankYouBox.style.display = 'flex';
+      });
+    </script>
+  </body>
+</html>
