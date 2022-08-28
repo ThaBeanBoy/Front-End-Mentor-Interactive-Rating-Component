@@ -153,6 +153,7 @@ body {
   position: absolute;
   left: 50%;
   bottom: 0;
+  transform: translateX(-50%);
   max-width: 410px;
   text-align: center;
   margin-top: 16px;
